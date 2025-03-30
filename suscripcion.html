@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción - El Poder del Conocimiento: Tu Mundo</title>
+    <link rel="stylesheet" href="pag.css">
+    <link rel="stylesheet" href="suscripcion.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+       (function(){
+          emailjs.init("I9LUeEKYP6lbDpSxP"); // Tu Public Key
+       })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>📚 El Poder del Conocimiento: Tu Mundo</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#" class="active">Suscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="subscription-main">
+        <div class="subscription-container">
+            <h2>Únete a nuestra comunidad</h2>
+            <p class="subscription-info">Para acceder a todas las experiencias compartidas, completa tu registro</p>
+            
+            <form id="subscriptionForm" class="subscription-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo*</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profesion">Profesión*</label>
+                    <input type="text" id="profesion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ciudad">Ciudad*</label>
+                    <input type="text" id="ciudad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico*</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="verification-section" style="display: none;">
+                    <p>Hemos enviado un código de verificación a tu correo electrónico</p>
+                    <div class="form-group">
+                        <label for="codigo">Código de verificación*</label>
+                        <input type="text" id="codigo" maxlength="6" placeholder="Ingresa el código de 6 dígitos">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Suscribirse</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>El Poder del Conocimiento: Tu Mundo</h4>
+                <p>Compartiendo sabiduría, construyendo tu mundo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="suscripcion.js"></script>
+</body>
+</html> 

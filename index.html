@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Poder del Conocimiento: Tu Mundo - Comparte tu sabiduría</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>📚 El Poder del Conocimiento: Tu Mundo</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="#subir">Compartir</a></li>
+                <li><a href="auth.html" class="auth-btn">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Transforma el mundo con tu conocimiento</h2>
+            <p>Tu mundo de experiencias y aprendizajes que transforman vidas</p>
+        </section>
+
+        <section class="upload-section" id="subir">
+            <div class="upload-container">
+                <h3>Comparte tu conocimiento</h3>
+                <div class="upload-area" id="dropZone">
+                    <img src="upload-icon.png" alt="Subir archivo">
+                    <p>Sube fotos o videos de tu experiencia</p>
+                    <button class="upload-btn">Seleccionar archivos</button>
+                    <input type="file" id="fileInput" multiple accept="image/*,video/*" hidden>
+                </div>
+                <div class="form-group">
+                    <label for="title">Título de tu experiencia:</label>
+                    <input type="text" id="title" placeholder="¿Qué conocimiento quieres compartir?">
+                    
+                    <label for="category">Categoría:</label>
+                    <select id="category">
+                        <option value="educacion">Educación</option>
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="ciencia">Ciencia</option>
+                        <option value="arte">Arte y Cultura</option>
+                        <option value="desarrollo">Desarrollo Personal</option>
+                        <option value="profesional">Experiencia Profesional</option>
+                    </select>
+
+                    <label for="description">Tu experiencia:</label>
+                    <textarea id="description" placeholder="Comparte tu conocimiento, aprendizajes y cómo pueden beneficiar a otros..."></textarea>
+                </div>
+                <button class="submit-btn">Compartir Sabiduría</button>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h3>Conocimientos que Transforman</h3>
+            <div class="menu-filter">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="educacion">Educación</button>
+                <button class="filter-btn" data-category="tecnologia">Tecnología</button>
+                <button class="filter-btn" data-category="ciencia">Ciencia</button>
+                <button class="filter-btn" data-category="arte">Arte y Cultura</button>
+                <button class="filter-btn" data-category="desarrollo">Desarrollo Personal</button>
+                <button class="filter-btn" data-category="profesional">Experiencia Profesional</button>
+            </div>
+            <div class="gallery-grid" id="galleryContainer">
+                <!-- Ejemplo de items que se generarán dinámicamente -->
+                <div class="gallery-item" data-category="tecnologia">
+                    <div class="gallery-image">
+                        <img src="placeholder.jpg" alt="Experiencia">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Título de la Experiencia</h4>
+                        <span class="category-tag">Tecnología</span>
+                        <p class="gallery-excerpt">Breve descripción de la experiencia...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>El Poder del Conocimiento: Tu Mundo</h4>
+                <p>Compartiendo sabiduría, construyendo tu mundo</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#about">Nuestra Visión</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#privacy">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="graf.js"></script>
+</body>
+</html>

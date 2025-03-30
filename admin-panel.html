@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - El Poder del Conocimiento</title>
+    <link rel="stylesheet" href="pag.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+    <nav class="admin-nav">
+        <div class="admin-header">
+            <h2>📚 Panel de Administración</h2>
+            <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <ul class="admin-menu">
+                <li>
+                    <button class="admin-menu-btn active" data-section="general">
+                        ⚙️ Configuración General
+                    </button>
+                </li>
+                <li>
+                    <button class="admin-menu-btn" data-section="content">
+                        📝 Gestionar Contenido
+                    </button>
+                </li>
+                <li>
+                    <button class="admin-menu-btn" data-section="users">
+                        👥 Usuarios Registrados
+                    </button>
+                </li>
+                <li>
+                    <button class="admin-menu-btn" data-section="categories">
+                        🏷️ Categorías
+                    </button>
+                </li>
+                <li>
+                    <button class="admin-menu-btn" data-section="appearance">
+                        🎨 Apariencia
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="admin-content">
+            <!-- Sección de Configuración General -->
+            <div class="admin-section active" id="general">
+                <h3>Configuración General</h3>
+                <form id="generalSettingsForm">
+                    <div class="form-group">
+                        <label>Título del Sitio</label>
+                        <input type="text" value="El Poder del Conocimiento: Tu Mundo">
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción del Sitio</label>
+                        <textarea rows="3">Tu mundo de experiencias y aprendizajes que transforman vidas</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Email de Contacto</label>
+                        <input type="email" value="jojetaz@gmail.com">
+                    </div>
+                    <button type="submit" class="save-btn">Guardar Cambios</button>
+                </form>
+            </div>
+
+            <!-- Sección de Gestión de Contenido -->
+            <div class="admin-section" id="content">
+                <h3>Gestionar Contenido</h3>
+                <div class="content-tools">
+                    <button class="add-btn">+ Agregar Nueva Experiencia</button>
+                    <input type="search" placeholder="Buscar contenido..." class="search-input">
+                </div>
+                <div class="content-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Categoría</th>
+                                <th>Autor</th>
+                                <th>Fecha</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contentTableBody">
+                            <!-- Se llenará dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Otras secciones... -->
+        </div>
+    </div>
+    <script src="admin-panel.js"></script>
+</body>
+</html> 

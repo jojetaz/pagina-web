@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias Compartidas - El Poder del Conocimiento: Tu Mundo</title>
+    <link rel="stylesheet" href="pag.css">
+    <link rel="stylesheet" href="experiencias.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>📚 El Poder del Conocimiento: Tu Mundo</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="experiencias.html" class="active">Experiencias</a></li>
+                <li><a href="index.html#subir">Compartir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="experiences-main">
+        <div class="sidebar">
+            <h3>Categorías</h3>
+            <ul class="category-menu">
+                <li>
+                    <a href="#" class="category-link active" data-category="todos">
+                        Todas las experiencias <span class="count">(12)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="category-link" data-category="educacion">
+                        Educación <span class="count">(3)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="category-link" data-category="tecnologia">
+                        Tecnología <span class="count">(4)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="category-link" data-category="ciencia">
+                        Ciencia <span class="count">(2)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="category-link" data-category="arte">
+                        Arte y Cultura <span class="count">(1)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="category-link" data-category="desarrollo">
+                        Desarrollo Personal <span class="count">(1)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="category-link" data-category="profesional">
+                        Experiencia Profesional <span class="count">(1)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-area">
+            <div class="experiences-header">
+                <h2>Experiencias Compartidas</h2>
+                <div class="sort-options">
+                    <select id="sortBy">
+                        <option value="recent">Más recientes</option>
+                        <option value="oldest">Más antiguas</option>
+                        <option value="az">A-Z</option>
+                        <option value="za">Z-A</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="experiencesContainer">
+                <!-- El contenido se cargará dinámicamente -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>El Poder del Conocimiento: Tu Mundo</h4>
+                <p>Compartiendo sabiduría, construyendo tu mundo</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#about">Nuestra Visión</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#privacy">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="experiencias.js"></script>
+</body>
+</html> 
