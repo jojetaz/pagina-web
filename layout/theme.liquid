@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+    {%- unless page_title contains settings.site_name %} &ndash; {{ settings.site_name }}{% endunless -%}
+  </title>
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ 'favicon.png' | asset_url }}">
+
+  <!-- Estilos base -->
+  {{ 'pag.css' | asset_url | stylesheet_tag }}
+  
+  <!-- Estilos específicos de la página -->
+  {% if template contains 'experiencias' %}
+    {{ 'experiencias.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+  
+  {% if template contains 'auth' %}
+    {{ 'auth.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+  <!-- Variables CSS personalizadas -->
+  <style>
+    :root {
+      --primary-color: {{ settings.primary_color }};
+      --secondary-color: {{ settings.secondary_color }};
+      --accent-color: {{ settings.accent_color }};
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script src="{{ 'modernizr-custom.js' | asset_url }}" defer></script>
+  {{ content_for_header }}
+</head>
+<body class="template-{{ template.name | handle }}">
+  <header>
+    <nav>
+      <div class="logo">
+        {% if settings.logo != blank %}
+          <img src="{{ settings.logo | img_url: 'medium' }}" alt="{{ settings.site_name }}">
+        {% else %}
+          <h1>📚 {{ settings.site_name }}</h1>
+        {% endif %}
+      </div>
+      <ul class="nav-links">
+        <li><a href="/" {% if template == 'index' %}class="active"{% endif %}>Inicio</a></li>
+        <li><a href="/experiencias" {% if template contains 'experiencias' %}class="active"{% endif %}>Experiencias</a></li>
+        <li><a href="/compartir" {% if template contains 'compartir' %}class="active"{% endif %}>Compartir</a></li>
+        {% if customer %}
+          <li><a href="/account" class="account-btn">Mi Cuenta</a></li>
+          <li><a href="{{ routes.account_logout_url }}" class="auth-btn">Cerrar Sesión</a></li>
+        {% else %}
+          <li><a href="/auth" class="auth-btn">Iniciar Sesión</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    {{ content_for_layout }}
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>{{ settings.site_name }}</h4>
+        <p>{{ settings.footer_text }}</p>
+      </div>
+      <div class="footer-section">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="/about">Nuestra Visión</a></li>
+          <li><a href="/contact">Contacto</a></li>
+          {% if settings.privacy_url != blank %}
+            <li><a href="{{ settings.privacy_url }}">Privacidad</a></li>
+          {% endif %}
+          {% if settings.terms_url != blank %}
+            <li><a href="{{ settings.terms_url }}">Términos y condiciones</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts específicos de la página -->
+  {% if template contains 'experiencias' %}
+    {{ 'experiencias.js' | asset_url | script_tag }}
+  {% endif %}
+  
+  {% if template contains 'auth' %}
+    {{ 'auth.js' | asset_url | script_tag }}
+  {% endif %}
+
+  <!-- Script para el modal de suscripción -->
+  <script>
+    window.themeSettings = {
+      modalDelay: {{ settings.modal_delay | times: 1000 }},
+      modalTitle: {{ settings.modal_title | json }},
+      modalText: {{ settings.modal_text | json }}
+    };
+  </script>
+</body>
+</html> 

@@ -1,0 +1,99 @@
+{
+  "current_theme_version": "1.0.0",
+  "theme_info": {
+    "name": "El Poder del Conocimiento",
+    "theme_author": "Tu Mundo",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "",
+    "theme_support_url": ""
+  },
+  "sections": [
+    {
+      "name": "Configuración General",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Colores del tema"
+        },
+        {
+          "type": "color",
+          "id": "primary_color",
+          "label": "Color primario",
+          "default": "#1a237e"
+        },
+        {
+          "type": "color",
+          "id": "secondary_color",
+          "label": "Color secundario",
+          "default": "#3949ab"
+        },
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "Color de acento",
+          "default": "#ffc107"
+        }
+      ]
+    },
+    {
+      "name": "Header",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "site_name",
+          "label": "Nombre del sitio",
+          "default": "El Poder del Conocimiento: Tu Mundo"
+        }
+      ]
+    },
+    {
+      "name": "Footer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footer_text",
+          "label": "Texto del footer",
+          "default": "Compartiendo sabiduría, construyendo tu mundo"
+        },
+        {
+          "type": "url",
+          "id": "privacy_url",
+          "label": "URL Política de privacidad"
+        },
+        {
+          "type": "url",
+          "id": "terms_url",
+          "label": "URL Términos y condiciones"
+        }
+      ]
+    },
+    {
+      "name": "Suscripción",
+      "settings": [
+        {
+          "type": "text",
+          "id": "modal_title",
+          "label": "Título del modal",
+          "default": "¡No te pierdas nada!"
+        },
+        {
+          "type": "textarea",
+          "id": "modal_text",
+          "label": "Texto del modal",
+          "default": "Suscríbete para acceder a contenido exclusivo y recibir notificaciones de nuevas experiencias."
+        },
+        {
+          "type": "number",
+          "id": "modal_delay",
+          "label": "Retraso del modal (segundos)",
+          "default": 5
+        }
+      ]
+    }
+  ]
+} 
